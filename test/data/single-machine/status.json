@@ -1,0 +1,8 @@
+{
+  "default": {
+    "provider-name": "virtualbox",
+    "state": "not_created",
+    "state-human-short": "not created",
+    "state-human-long": "The environment has not yet been created. Run `vagrant up` to\ncreate the environment. If a machine is not created, only the\ndefault provider will be shown. So if a provider is not listed,\nthen the machine is not created for that environment."
+  }
+}

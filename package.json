@@ -1,0 +1,82 @@
+{
+  "name": "vagrant",
+  "displayName": "Vagrant",
+  "description": "Vagrant support for Visual Studio Code",
+  "version": "0.1.0",
+  "publisher": "bbenoist",
+  "categories": [
+    "Languages",
+    "Other"
+  ],
+  "icon": "images/icon.png",
+  "license": "MIT",
+  "bugs": { "url": "https://github.com/bbenoist/vscode-vagrant/issues" },
+  "homepage": "https://github.com/bbenoist/vscode-vagrant/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbenoist/vscode-vagrant.git"
+  },
+  "galleryBanner": {
+    "color": "#FFFFFF",
+    "theme": "light"
+  },
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "activationEvents": [
+    "onCommand:extension.vagrantUp",
+    "onCommand:extension.vagrantProvision",
+    "onCommand:extension.vagrantSuspend",
+    "onCommand:extension.vagrantHalt",
+    "onCommand:extension.vagrantReload",
+    "onCommand:extension.vagrantDestroy",
+    "workspaceContains:Vagrantfile"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ruby",
+        "extensions": [
+          "Vagrantfile"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "extension.vagrantUp",
+        "title": "Vagrant: Start a machine."
+      },
+      {
+        "command": "extension.vagrantProvision",
+        "title": "Vagrant: Provision a machine."
+      },
+      {
+        "command": "extension.vagrantSuspend",
+        "title": "Vagrant: Suspend a machine."
+      },
+      {
+        "command": "extension.vagrantHalt",
+        "title": "Vagrant: Halt a machine."
+      },
+      {
+        "command": "extension.vagrantReload",
+        "title": "Vagrant: Reload a machine."
+      },
+      {
+        "command": "extension.vagrantDestroy",
+        "title": "Vagrant: Destroy a machine."
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+  },
+  "devDependencies": {
+    "glob": "^7.0.0",
+    "rimraf": "^2.5.2",
+    "typescript": "^1.6.2",
+    "vscode": "0.10.x"
+  }
+}
