@@ -37,6 +37,6 @@ You can submit your issues and feature requests on the GitHub [issues page](http
 
 ## More information
 * [vscode-vagrant on the Visual Studio Marketplace](https://marketplace.visualstudio.com/items/bbenoist.Vagrant)
-* [vscode-nix GitHub repository](https://github.com/bbenoist/vscode-vagrant)
+* [vscode-vagrant GitHub repository](https://github.com/bbenoist/vscode-vagrant)
 * [Visual Studio Code website](http://code.visualstudio.com/)
 * [Vagrant website](https://www.vagrantup.com/)
