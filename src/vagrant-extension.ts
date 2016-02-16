@@ -66,9 +66,10 @@ export class VagrantExtension {
           vscode.window.showErrorMessage(`Vagrant exited with code ${code}`);
           commandOutput.show();
           reject(`Vagrant exited with code ${code}`);
+        } else {
+          vscode.window.showInformationMessage('Vagrant operation suceeded.');
+          accept();
         }
-        vscode.window.showInformationMessage('Vagrant operation suceeded.');
-        accept();
       });
     });
   }
