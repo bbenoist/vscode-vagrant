@@ -1,9 +1,17 @@
 # [Vagrant](https://www.vagrantup.com/) support for [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Features
+### Vagrant machine status
+
+![vagrant status](images/status.jpg)
+
+| `not_created` | `running` | `saved` | `poweroff` |
+|---------------|-----------|---------|------------|
+|              |          |        |           |
+
 ### Vagrant machine management
 
-![vagrant up within vscode](images/demo-single-machine.gif)
+![vagrant demo with a single machine](images/demo-single-machine.gif)
 
 The following Vagrant commands are currently supported:
 
@@ -19,7 +27,7 @@ The following Vagrant commands are currently supported:
 
 The extension automatically finds the `Vagrantfile` files within the workspace and will ask you on which machine to execute the desired command if they are multiple.
 
-![vagrant up within vscode](images/demo-multi-machine.gif)
+![vagrant up with multiple machines](images/demo-multi-machine.gif)
 
 ### Vagrantfile syntax coloring
 ![Syntax coloring](images/syntax-coloring.jpg)
