@@ -5,9 +5,12 @@
 
 ![vagrant status](images/status.jpg)
 
-| `not_created` | `running` | `saved` | `poweroff` |
-|---------------|-----------|---------|------------|
-|              |          |        |           |
+| Status        | Icon                        |
+|---------------|-----------------------------|
+| `not_created` | ![](images/not-created.jpg) |
+| `running`     | ![](images/running.jpg)     |
+| `saved`       | ![](images/saved.jpg)       |
+| `poweroff`    | ![](images/poweroff.jpg)    |
 
 ### Vagrant machine management
 
