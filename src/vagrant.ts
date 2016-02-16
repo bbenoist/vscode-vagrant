@@ -130,12 +130,13 @@ export class Vagrantfile {
   status(machine?:string, callback?:(status:any) => void) {
     Command.status(this.directory, machine, callback);
   }
-  machines(callback?:(machines:Machine[]) => void) {
+  machines(callback?:(machines:Machine[], status:any) => void) {
     this.status(null, (status) => {
       callback(
         Object.keys(status).map((key) => {
           return new Machine(key, this.directory);
-        })
+        }),
+        status
       );
     })
   }
@@ -167,13 +168,16 @@ export class Vagrantfile {
 
 export class Machine {
   private _name:string;
-  private directory:string;
+  private _directory:string;
   get name():string {
     return this._name;
   }
+  get directory():string {
+    return this._directory;
+  }
   constructor(name:string, directory:string) {
     this._name = name;
-    this.directory = directory;
+    this._directory = directory;
   }
   status(callback?:(status:any) => void) {
     Command.status(this.directory, this.name, (status) => {

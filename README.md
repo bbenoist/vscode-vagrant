@@ -2,6 +2,9 @@
 
 ## Features
 ### Vagrant machine management
+
+![vagrant up within vscode](images/demo-single-machine.gif)
+
 The following Vagrant commands are currently supported:
 
 | Name      | Vagrant Command      | VS Code Command               |
@@ -12,10 +15,11 @@ The following Vagrant commands are currently supported:
 | Halt      | `vagrant halt`       | Vagrant: Halt a machine.      |
 | Reload    | `vagrant reload`     | Vagrant: Reload a machine.    |
 | Destroy   | `vagrant destroy -f` | Vagrant: Destroy a machine.   |
+| Status    | `vagrant status`     | Vagrant: Get machine status.  |
 
-The extension automatically finds the `Vagrantfile` files within the workspace and will ask you on which machine to execute if they are multiple.
+The extension automatically finds the `Vagrantfile` files within the workspace and will ask you on which machine to execute the desired command if they are multiple.
 
-![vagrant up within vscode](images/command-up.gif)
+![vagrant up within vscode](images/demo-multi-machine.gif)
 
 ### Vagrantfile syntax coloring
 ![Syntax coloring](images/syntax-coloring.jpg)
