@@ -5,12 +5,12 @@
 
 ![vagrant status](images/status.jpg)
 
-| Status        | Icon                        |
-|---------------|-----------------------------|
-| `not_created` | ![](images/not-created.jpg) |
-| `running`     | ![](images/running.jpg)     |
-| `saved`       | ![](images/saved.jpg)       |
-| `poweroff`    | ![](images/poweroff.jpg)    |
+| Status        | Icon                            |
+|---------------|---------------------------------|
+| `not_created` | ![icon](images/not-created.jpg) |
+| `running`     | ![icon](images/running.jpg)     |
+| `saved`       | ![icon](images/saved.jpg)       |
+| `poweroff`    | ![icon](images/poweroff.jpg)    |
 
 ### Vagrant machine management
 
