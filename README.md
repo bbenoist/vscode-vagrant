@@ -40,7 +40,7 @@ The extension automatically finds the `Vagrantfile` files within the workspace a
 No extra step is required. Simply make sure [Vagrant](https://www.vagrantup.com/) is still correctly installed and available in your `PATH` environment variable.
 
 ### Visual Studio Code
-Hit `Ctrl+P` and enter the `ext install vagrant` command.
+Hit `Ctrl+P` and enter the `ext install vagrant` command. **Warning:** be sure to select the extension authored from **bbenoist**.
 
 ### Installing the extension locally
 Just clone the [GitHub repository](https://github.com/bbenoist/vscode-vagrant) under your local extensions folder:
