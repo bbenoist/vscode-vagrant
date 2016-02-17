@@ -2,7 +2,7 @@
   "name": "vagrant",
   "displayName": "Vagrant",
   "description": "Vagrant support for Visual Studio Code",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "publisher": "bbenoist",
   "categories": [
     "Languages",
