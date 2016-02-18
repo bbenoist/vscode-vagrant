@@ -83,5 +83,11 @@
     "rimraf": "^2.5.2",
     "typescript": "^1.6.2",
     "vscode": "0.10.x"
-  }
+  },
+  "quickTips": [
+    { "tip": "The bbenoist.vagrant extension also supports the Vagrant multi-machine feature",
+      "url": "https://github.com/bbenoist/vscode-vagrant#vagrant-machine-management" },
+    { "tip": "The bbenoist.vagrant extension can display the status of the machines found in your workspace",
+      "url": "https://github.com/bbenoist/vscode-vagrant#vagrant-machine-status" }
+  ]
 }
