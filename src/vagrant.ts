@@ -40,10 +40,12 @@ export class Command {
             return unescaped;
           })
           .forEach((row) => {
-            if (!Object.prototype.hasOwnProperty.call(obj, row[1])) {
-              obj[row[1]] = {}
+            if (row[1].length > 0) {
+              if (!Object.prototype.hasOwnProperty.call(obj, row[1])) {
+                obj[row[1]] = {}
+              }
+              obj[row[1]][row[2]] = row[3];
             }
-            obj[row[1]][row[2]] = row[3];
           });
         callback(obj);
       });
