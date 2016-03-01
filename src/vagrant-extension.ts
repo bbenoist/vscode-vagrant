@@ -143,4 +143,8 @@ export function registerCommands(context:vscode.ExtensionContext) {
   vscode.commands.registerCommand('extension.vagrantStatus', () => {
     findMachines().then(listMachines).catch(console.log);
   });
+  vscode.commands.registerCommand('extension.vagrantLog', () => {
+    var commandOutput = vscode.window.createOutputChannel("Vagrant");
+    commandOutput.show();
+  });
 }

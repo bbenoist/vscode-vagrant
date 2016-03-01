@@ -31,6 +31,7 @@
     "onCommand:extension.vagrantReload",
     "onCommand:extension.vagrantDestroy",
     "onCommand:extension.vagrantStatus",
+    "onCommand:extension.vagrantLog",
     "workspaceContains:Vagrantfile"
   ],
   "main": "./out/src/extension",
@@ -71,6 +72,10 @@
       {
         "command": "extension.vagrantStatus",
         "title": "Vagrant: Get machine status."
+      },
+      {
+        "command": "extension.vagrantLog",
+        "title": "Vagrant: Show Vagrant Log."
       }
     ]
   },

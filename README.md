@@ -30,6 +30,8 @@ The following Vagrant commands are currently supported:
 
 The extension automatically finds the `Vagrantfile` files within the workspace and will ask you on which machine to execute the desired command if they are multiple.
 
+> **Tip** You can use the `Vagrant: Show Vagrant Log.` command to show the console output.
+
 ![vagrant up with multiple machines](images/demo-multi-machine.gif)
 
 ### Vagrantfile syntax coloring

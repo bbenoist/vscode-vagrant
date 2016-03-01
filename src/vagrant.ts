@@ -1,3 +1,4 @@
+
 import * as childProcess from 'child_process';
 import * as path from 'path';
 
@@ -11,14 +12,14 @@ export class OutputParser {
 
 export class Command {
   static spawn(args:string[], cwd?:any) {
-    return childProcess.spawn('vagrant', args, {cwd:cwd});
+    return childProcess.spawn('vagrant', ['--no-color'].concat(args), {cwd:cwd});
   }
 
   static exec(
     args:string[], cwd?:string,
     callback?:(error:Error, stdout:Buffer, stderr:Buffer) => void
   ) {
-    childProcess.exec('vagrant ' + args.join(' '), {cwd:cwd}, callback);
+    childProcess.exec('vagrant --no-color ' + args.join(' '), {cwd:cwd}, callback);
   }
 
   static status(cwd?:string, machine?:string, callback?:(status:any) => void) {
