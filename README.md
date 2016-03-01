@@ -18,19 +18,19 @@
 
 The following Vagrant commands are currently supported:
 
-| Name      | Vagrant Command      | VS Code Command               |
-|-----------|----------------------|-------------------------------|
-| Up        | `vagrant up`         | Vagrant: Start a machine.     |
-| Provision | `vagrant provision`  | Vagrant: Provision a machine. |
-| Suspend   | `vagrant suspend`    | Vagrant: Suspend a machine.   |
-| Halt      | `vagrant halt`       | Vagrant: Halt a machine.      |
-| Reload    | `vagrant reload`     | Vagrant: Reload a machine.    |
-| Destroy   | `vagrant destroy -f` | Vagrant: Destroy a machine.   |
-| Status    | `vagrant status`     | Vagrant: Get machine status.  |
+| Name      | Vagrant Command      | VS Code Command    |
+|-----------|----------------------|--------------------|
+| Up        | `vagrant up`         | Vagrant: Up        |
+| Provision | `vagrant provision`  | Vagrant: Provision |
+| Suspend   | `vagrant suspend`    | Vagrant: Suspend   |
+| Halt      | `vagrant halt`       | Vagrant: Halt      |
+| Reload    | `vagrant reload`     | Vagrant: Reload    |
+| Destroy   | `vagrant destroy -f` | Vagrant: Destroy   |
+| Status    | `vagrant status`     | Vagrant: Status    |
 
 The extension automatically finds the `Vagrantfile` files within the workspace and will ask you on which machine to execute the desired command if they are multiple.
 
-> **Tip** You can use the `Vagrant: Show Vagrant Log.` command to show the console output.
+> **Tip** You can use the `Vagrant: Show Log` command to show the console output.
 
 ![vagrant up with multiple machines](images/demo-multi-machine.gif)
 

@@ -123,27 +123,27 @@ function executeChildProcess(proc:childProcess.ChildProcess) {
 }
 
 export function registerCommands(context:vscode.ExtensionContext) {
-  [ {name: 'extension.vagrantUp',
+  [ {name: 'vagrant.up',
       action: (machine) => { return machine.up(); }},
-    {name: 'extension.vagrantProvision',
+    {name: 'vagrant.provision',
       action: (machine) => { return machine.provision(); }},
-    {name: 'extension.vagrantSuspend',
+    {name: 'vagrant.suspend',
       action: (machine) => { return machine.suspend(); }},
-    {name: 'extension.vagrantHalt',
+    {name: 'vagrant.halt',
       action: (machine) => { return machine.halt(); }},
-    {name: 'extension.vagrantReload',
+    {name: 'vagrant.reload',
       action: (machine) => { return machine.reload(); }},
-    {name: 'extension.vagrantDestroy',
+    {name: 'vagrant.destroy',
       action: (machine) => { return machine.destroy(); }}
   ].map((description) => {
     return registerCmd(description.name, description.action);
   }).forEach((disposable) => {
     context.subscriptions.push(disposable);
   });
-  vscode.commands.registerCommand('extension.vagrantStatus', () => {
+  vscode.commands.registerCommand('vagrant.status', () => {
     findMachines().then(listMachines).catch(console.log);
   });
-  vscode.commands.registerCommand('extension.vagrantLog', () => {
+  vscode.commands.registerCommand('vagrant.log', () => {
     var commandOutput = vscode.window.createOutputChannel("Vagrant");
     commandOutput.show();
   });

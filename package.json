@@ -24,14 +24,14 @@
     "vscode": "^0.10.1"
   },
   "activationEvents": [
-    "onCommand:extension.vagrantUp",
-    "onCommand:extension.vagrantProvision",
-    "onCommand:extension.vagrantSuspend",
-    "onCommand:extension.vagrantHalt",
-    "onCommand:extension.vagrantReload",
-    "onCommand:extension.vagrantDestroy",
-    "onCommand:extension.vagrantStatus",
-    "onCommand:extension.vagrantLog",
+    "onCommand:vagrant.up",
+    "onCommand:vagrant.provision",
+    "onCommand:vagrant.suspend",
+    "onCommand:vagrant.halt",
+    "onCommand:vagrant.reload",
+    "onCommand:vagrant.destroy",
+    "onCommand:vagrant.status",
+    "onCommand:vagrant.log",
     "workspaceContains:Vagrantfile"
   ],
   "main": "./out/src/extension",
@@ -46,36 +46,44 @@
     ],
     "commands": [
       {
-        "command": "extension.vagrantUp",
-        "title": "Vagrant: Start a machine."
+        "command": "vagrant.up",
+        "title": "Up",
+        "category": "Vagrant"
       },
       {
-        "command": "extension.vagrantProvision",
-        "title": "Vagrant: Provision a machine."
+        "command": "vagrant.provision",
+        "title": "Provision",
+        "category": "Vagrant"
       },
       {
-        "command": "extension.vagrantSuspend",
-        "title": "Vagrant: Suspend a machine."
+        "command": "vagrant.suspend",
+        "title": "Suspend",
+        "category": "Vagrant"
       },
       {
-        "command": "extension.vagrantHalt",
-        "title": "Vagrant: Halt a machine."
+        "command": "vagrant.halt",
+        "title": "Halt",
+        "category": "Vagrant"
       },
       {
-        "command": "extension.vagrantReload",
-        "title": "Vagrant: Reload a machine."
+        "command": "vagrant.reload",
+        "title": "Reload",
+        "category": "Vagrant"
       },
       {
-        "command": "extension.vagrantDestroy",
-        "title": "Vagrant: Destroy a machine."
+        "command": "vagrant.destroy",
+        "title": "Destroy",
+        "category": "Vagrant"
       },
       {
-        "command": "extension.vagrantStatus",
-        "title": "Vagrant: Get machine status."
+        "command": "vagrant.status",
+        "title": "Status",
+        "category": "Vagrant"
       },
       {
-        "command": "extension.vagrantLog",
-        "title": "Vagrant: Show Vagrant Log."
+        "command": "vagrant.log",
+        "title": "Show Log",
+        "category": "Vagrant"
       }
     ]
   },
