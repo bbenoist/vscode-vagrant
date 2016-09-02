@@ -50,7 +50,7 @@ Just clone the [GitHub repository](https://github.com/bbenoist/vscode-vagrant) u
 * Mac / Linux: `$HOME/.vscode/extensions`
 
 ## Issues / Feature requests
-You can submit your issues and feature requests on the GitHub [issues page](https://github.com/bbenoist/vscode-nix/issues).
+You can submit your issues and feature requests on the GitHub [issues page](https://github.com/bbenoist/vscode-vagrant/issues).
 
 ## More information
 * [vscode-vagrant on the Visual Studio Marketplace](https://marketplace.visualstudio.com/items/bbenoist.Vagrant)
