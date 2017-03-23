@@ -94,8 +94,8 @@
   "devDependencies": {
     "glob": "^7.0.0",
     "rimraf": "^2.5.2",
-    "typescript": "^1.6.2",
-    "vscode": "0.10.x"
+    "typescript": "^2.2.1",
+    "vscode": "1.1.x"
   },
   "quickTips": [
     { "tip": "The bbenoist.vagrant extension also supports the Vagrant multi-machine feature",
