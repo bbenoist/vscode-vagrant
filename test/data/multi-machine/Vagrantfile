@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "trusty" do |trusty|
     trusty.vm.box = "ubuntu/trusty64"
   end
-  config.vm.define "wily" do |wily|
-    wily.vm.box = "ubuntu/wily64"
+  config.vm.define "trusty2" do |trusty|
+    trusty.vm.box = "ubuntu/trusty64"
   end
 end

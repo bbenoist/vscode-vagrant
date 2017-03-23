@@ -17,7 +17,7 @@ export class Command {
 
   static exec(
     args:string[], cwd?:string,
-    callback?:(error:Error, stdout:Buffer, stderr:Buffer) => void
+    callback?:(error:Error, stdout:string, stderr:string) => void
   ) {
     childProcess.exec('vagrant --no-color ' + args.join(' '), {cwd:cwd}, callback);
   }
@@ -28,11 +28,12 @@ export class Command {
       (error, stdout, stderr) => {
         if (error) throw error;
         var obj:any = {}
-        stdout.toString()
+        stdout
           .split(/\r?\n/)
           .map((line) => {return line.trim();})
           .filter((line) => {return line.length > 0;})
           .map((line) => {return line.split(',');})
+          .filter((row) => {return row.length == 4})
           .map((row) => {
             var unescaped = [];
             row.forEach((cell) => {

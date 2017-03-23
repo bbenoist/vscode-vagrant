@@ -36,7 +36,7 @@ suite("Vagrant", () => {
     vagrant.Command.exec(['status', 'default'], singleMachineDir, done);
   });
   test("VagrantCommand.exec()-multi-machine", (done) => {
-    vagrant.Command.exec(['status', 'wily'], multiMachineDir, done);
+    vagrant.Command.exec(['status', 'trusty2'], multiMachineDir, done);
   });
   test("VagrantCommand.spawn()-single-machine", (done) => {
     vagrant.Command.spawn(['status', 'default'], singleMachineDir).on('close', done);
@@ -46,7 +46,10 @@ suite("Vagrant", () => {
   });
   test('VagrantCommand.status()-single-machine', (done) => {
     vagrant.Command.status(singleMachineDir, null, (status) => {
-      assert.equal(JSON.stringify(status, null, 2), fs.readFileSync(path.join(singleMachineDir, 'status.json')).toString());
+      var refStatus = JSON.parse(fs.readFileSync(path.join(singleMachineDir, 'status.json')).toString());
+      ["provider-name", "state", "state-human-short", "state-human-long"].forEach(property => {
+        assert.equal(status[property], status[property])
+      });
       done();
     });
   });
@@ -92,7 +95,7 @@ suite("Vagrant", () => {
   test('Vagrantfile.machines()-multi-machine-trusty', (done) => {
     testVagrantFileMachine(multiMachineDir, 2, 'trusty', done);
   });
-  test('Vagrantfile.machines()-multi-machine-wily', (done) => {
-    testVagrantFileMachine(multiMachineDir, 2, 'wily', done);
+  test('Vagrantfile.machines()-multi-machine-trusty2', (done) => {
+    testVagrantFileMachine(multiMachineDir, 2, 'trusty2', done);
   });
 });
