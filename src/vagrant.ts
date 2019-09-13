@@ -1,6 +1,7 @@
 
 import * as childProcess from 'child_process';
 import * as path from 'path';
+import * as vscode from 'vscode';
 
 export class OutputParser {
   static unescapeString(str:string) {
@@ -26,7 +27,13 @@ export class Command {
     Command.exec(
       ['status', '--machine-readable'], cwd,
       (error, stdout, stderr) => {
-        if (error) throw error;
+        if (error) {
+          vscode.window.showWarningMessage(`vscode-vagrant encountred an error while running a Vagrantfile, but will continue for the other good ones. See the full stacktrace in the Output tab`);
+          let errorOutput = vscode.window.createOutputChannel("Vagrantfiles");
+          errorOutput.show();
+          errorOutput.clear();
+          errorOutput.append(error.stack);
+        }
         var obj:any = {}
         stdout
           .split(/\r?\n/)
